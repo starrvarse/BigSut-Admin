@@ -1,0 +1,60 @@
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="dashboard.html" class="navbar-logo">
+            <i class="fas fa-home"></i> BigSur Backend Software
+        </a>
+        
+        <!-- Burger icon for mobile -->
+        <div class="burger-icon" id="burger-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <ul class="navbar-menu" id="navbar-menu">
+            <li class="navbar-item">
+                <a href="dashboard.html">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="email.html">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="pushnotification.html">
+                    <i class="fas fa-bell"></i> Push Notification
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="contacts.html">
+                    <i class="fas fa-address-book"></i> Contacts
+                </a>
+            </li>
+            <!-- New Apps page -->
+            <li class="navbar-item">
+                <a href="apps.html">
+                    <i class="fas fa-th-large"></i> Apps
+                </a>
+            </li>
+        </ul>
+
+        <div class="navbar-right">
+            <a href="logout.html" class="navbar-item">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Script to handle burger icon toggle -->
+<script>
+    const burgerIcon = document.getElementById('burger-icon');
+    const navbarMenu = document.getElementById('navbar-menu');
+
+    burgerIcon.addEventListener('click', () => {
+        navbarMenu.classList.toggle('active');
+    });
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compose Email</title>
+    <link rel="stylesheet" href="css/compose_email.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+    <!-- Placeholder for dynamic navbar -->
+    <div id="navbar-container"></div>
+    
+    <div class="email-container">
+        <div class="sidebar">
+            <div class="menu">
+                <button id="inboxBtn"><i class="fas fa-inbox"></i> Outbox</button>
+                <button><i class="fas fa-star"></i> Favorite</button>
+                <button><i class="fas fa-trash"></i> Trash</button>
+            </div>
+        </div>
+
+        <div class="compose-section">
+            <div class="email-header">
+                <div class="form-group">
+                    <label for="to">To:</label>
+                    <select id="to" required>
+                        <!-- Options will be dynamically populated from Firebase -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" placeholder="Enter subject" required>
+                </div>
+            </div>
+
+            <div class="email-body">
+                <textarea id="emailContent" rows="15" placeholder="Compose your email here..." required></textarea>
+            </div>
+
+            <div class="email-footer">
+                <label for="fileInput" class="visually-hidden">Attach Files</label> <!-- Hidden label for accessibility -->
+                <input type="file" id="fileInput" multiple aria-label="Attach Files">
+                <button class="attach-btn" id="attachBtn">
+                    <i class="fas fa-paperclip"></i> Attach files
+                </button>
+                <div id="selectedFiles" class="selected-files">
+                    <!-- Selected files will be displayed here -->
+                </div>
+                <button class="send-btn">
+                    <i class="fas fa-paper-plane"></i> Send
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/compose_email.js"></script>
+</body>
+</html>

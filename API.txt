@@ -1,0 +1,7 @@
+const mailgunApiKey = '0ccfd5dad093a4f3c5d135de9b422869-784975b6-5bae7d6f';
+const mailgunApiBaseUrl = `https://api.mailgun.net/v3`;
+const apiKey = 'api:07c3abb939b6a6838ba8be492c7be367-5dcb5e36-43d3b712'; // Your Mailgun API key
+const domain = 'bigsur.in'; // Your Mailgun domain
+				
+				
+				

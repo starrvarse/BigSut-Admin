@@ -1,0 +1,92 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.email-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.mail-list {
+    width: 300px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.mail-content {
+    flex-grow: 1;
+    padding: 21px;
+    overflow-y: auto;
+}
+
+.filter {
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.mail-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.mail-item:hover {
+    background-color: #f5f5f5;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.content {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.attachments {
+    margin-top: 20px;
+}
+
+.attachment-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Styles for the email body content */
+#email-body {
+    max-width: 100%;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+#email-body * {
+    max-width: 100%;
+}
+
+#email-body img {
+    height: auto !important;
+}
+
+#email-body table {
+    width: 100% !important;
+    height: auto !important;
+}
+
+#email-body td {
+    max-width: 100%;
+    word-break: break-word;
+}

@@ -1,0 +1,110 @@
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-logo i {
+    margin-right: 10px;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin-left: 20px;
+}
+
+.navbar-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 15px;
+    transition: background 0.3s;
+}
+
+.navbar-item a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 15px;
+    transition: background 0.3s;
+}
+
+.navbar-right a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* The rest of the existing CSS remains the same */
+
+.selected-files {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Burger icon for mobile */
+.burger-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hide menu on mobile by default */
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-menu.active {
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+}
+
+.navbar-menu.active .navbar-item {
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .burger-icon {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-right {
+        display: none;
+    }
+}

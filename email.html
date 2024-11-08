@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Dashboard</title>
+    <link rel="stylesheet" href="css/email.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+    <!-- Placeholder for dynamic navbar -->
+    <div id="navbar-container"></div>
+    <div class="email-container">
+        <div class="sidebar">
+            <button class="compose">
+                <i class="fas fa-edit"></i> Compose Mail
+            </button>
+            <div class="menu">
+                <button><i class="fas fa-paper-plane"></i> Sent Mails</button>
+                <button><i class="fas fa-star"></i> Favorite</button>
+                <button><i class="fas fa-trash"></i> Trash</button>
+            </div>
+        </div>
+
+        <div class="mail-list">
+            <div class="filter">
+                <input type="text" placeholder="Filter mails" id="filter-input">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="mails" id="mail-list">
+                <!-- Dynamically populated from emails database -->
+            </div>
+        </div>
+
+        <div class="mail-content" id="mail-content">
+            <div class="header">
+                <div class="to">To: <span id="email-to">starrvarse@gmail.com</span></div>
+                <div class="date">Date: <span id="email-date">09/10/2024</span></div>
+            </div>
+            <div class="content" id="email-body">
+                Mail contents
+            </div>
+            <div class="attachments">
+                <button>Attached files</button>
+                <div class="attachment-icons" id="attachment-icons">
+                   <!--  Dynamically populated from email_attachments database -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/email.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

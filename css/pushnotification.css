@@ -1,0 +1,236 @@
+/* General styling for the content */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #343a40;
+}
+
+.content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #007bff;
+    text-align: center;
+}
+
+/* Create button */
+.create-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: block;
+    margin: 0 auto 25px;
+    max-width: 200px;
+    text-align: center;
+}
+
+.create-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.create-btn:active {
+    background-color: #1e7e34;
+}
+
+/* Table styling */
+.notification-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    overflow-x: auto;
+    background-color: #fdfdfd;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.notification-table th, 
+.notification-table td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.notification-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.notification-table tr {
+    transition: background 0.3s ease;
+}
+
+.notification-table tr:hover {
+    background-color: #f1f5ff;
+}
+
+/* Delete button inside the table */
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.delete-btn:active {
+    background-color: #bd2130;
+}
+
+/* Popup form styling */
+.popup-form {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popup-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.popup-content textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+.popup-content textarea:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* Save and close buttons */
+.save-btn, .close-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin: 5px;
+    width: 100px;
+}
+
+.save-btn:hover, .close-btn:hover {
+    background-color: #0069d9;
+    transform: translateY(-2px);
+}
+
+.save-btn:active, .close-btn:active {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .create-btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .notification-table th, 
+    .notification-table td {
+        padding: 10px 15px;
+    }
+
+    .popup-content {
+        width: 95%;
+        max-width: 400px;
+    }
+
+    .save-btn, .close-btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .create-btn {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .popup-content {
+        padding: 20px;
+    }
+
+    .save-btn, .close-btn {
+        width: 90px;
+    }
+}

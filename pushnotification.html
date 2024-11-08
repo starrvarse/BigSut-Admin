@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push Notifications</title>
+    <link rel="stylesheet" href="css/pushnotification.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Placeholder for dynamic navbar -->
+    <div id="navbar-container"></div>
+
+    <div class="content">
+        <h1>Push Notifications</h1>
+        
+        <!-- Create Button -->
+        <button id="create-btn" class="create-btn">Create</button>
+
+        <!-- Notification Table -->
+        <table id="notifications-table" class="notification-table">
+            <thead>
+                <tr>
+                    <th>Notifications</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic notifications will be appended here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Popup Form (Initially Hidden) -->
+    <div id="popup-form" class="popup-form">
+        <div class="popup-content">
+            <h2>Create Notification</h2>
+            <textarea id="notification-text" placeholder="Enter your notification here..." rows="5"></textarea>
+            <button id="save-btn" class="save-btn">Save</button>
+            <button id="close-popup" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/pushnotification.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>
